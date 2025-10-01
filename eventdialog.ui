@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EventDialog</class>
+ <widget class="QDialog" name="EventDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Создание события</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLineEdit" name="lineEditTitle">
+     <property name="placeholderText">
+      <string>Введите название события</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutTime">
+     <item>
+      <widget class="QTimeEdit" name="timeEditStart">
+       <property name="toolTip">
+        <string>Время начала</string>
+       </property>
+       <property name="displayFormat">
+        <string>HH:mm</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTimeEdit" name="timeEditEnd">
+       <property name="toolTip">
+        <string>Время окончания</string>
+       </property>
+       <property name="displayFormat">
+        <string>HH:mm</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QComboBox" name="comboBoxTags">
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+     <item><property name="text"><string>Работа</string></property></item>
+     <item><property name="text"><string>Учёба</string></property></item>
+     <item><property name="text"><string>Семья</string></property></item>
+     <item><property name="text"><string>Хобби</string></property></item>
+     <item><property name="text"><string>Спорт</string></property></item>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="textEditDescription">
+     <property name="placeholderText">
+      <string>Введите подробное описание события...</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+QPushButton {
+  background-color: #e6b07c;
+  color: #2b1c10;
+  border-radius: 5px;
+  padding: 6px;
+  font-weight: bold;
+}
+QPushButton:hover {
+  background-color: #f0c292;
+}
+      </string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
